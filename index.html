@@ -36,10 +36,12 @@
     geocoder: false,
     sceneModePicker: false,
     baseLayerPicker: false,
+    navigationHelpButton: true,
     terrainProvider: new Cesium.EllipsoidTerrainProvider()
   });
 
   viewer.scene.globe.depthTestAgainstTerrain = false;
+  viewer.navigationHelpButton.viewModel.showInstructions = true;
 
   async function addTileset(url) {
     try {
